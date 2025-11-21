@@ -24,9 +24,9 @@ public class Triangulo extends Figura {
         int [] lx = {p1.getX(), p2.getX(), p3.getX()};
         int [] ly = {p1.getY(), p2.getY(), p3.getY()};
         g.setColor(fondo);
-        g.fillPolygon(lx, ly, 4); // relleno
+        g.fillPolygon(lx, ly, 3); // relleno
         g.setColor(trazo);
-        g.drawPolygon(lx, ly, 4); // borde
+        g.drawPolygon(lx, ly, 3); // borde
     }
 
     public Punto2D getP1() {

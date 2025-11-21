@@ -16,11 +16,11 @@ public class Principal {
         PanelFiguras panel = new PanelFiguras();
 
         // Añadimos algunas figuras con colores
-        panel.agregarFigura(new Circulo(new Punto2D(50, 50), 40, Color.YELLOW, Color.RED));
-        panel.agregarFigura(new Rectangulo(new Punto2D(150, 100), 80, 50, Color.GREEN, Color.BLUE));
-        panel.agregarFigura(new Cuadrado(new Punto2D(250, 220), 90, Color.GREEN, Color.BLUE));
-        panel.agregarFigura(new Triangulo(new Punto2D(500, 300), new Punto2D(350, 200), new Punto2D(650, 200), new Punto2D(500, 500),  Color.GREEN, Color.BLUE));
-        panel.agregarFigura(new Trapecio(new Punto2D(100, 500), new Punto2D(40, 700), new Punto2D(170, 700), new Punto2D(60, 400), new Punto2D(150, 400), Color.GREEN, Color.BLUE));
+        panel.agregarFigura(new Circulo(new Punto2D(250, 35), 160, Color.GRAY, Color.GREEN));
+        panel.agregarFigura(new Rectangulo(new Punto2D(150, 100), 140, 100, Color.GREEN, Color.BLUE));
+        panel.agregarFigura(new Cuadrado(new Punto2D(500, 60), 90, Color.CYAN, Color.ORANGE));
+        panel.agregarFigura(new Triangulo(new Punto2D(300, 300), new Punto2D(200, 200), new Punto2D(400, 200), new Punto2D(300, 400),  Color.PINK, Color.RED));
+        panel.agregarFigura(new Trapecio(new Punto2D(100, 500), new Punto2D(300, 500), new Punto2D(150, 350), new Punto2D(250, 350), new Punto2D(150, 400), Color.MAGENTA, Color.BLACK));
 
         frame.add(panel);
         frame.setSize(400, 300);
