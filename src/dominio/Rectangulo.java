@@ -1,17 +1,28 @@
 package dominio;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class Rectangulo extends Figura {
     protected double base;
     protected double altura;
 
-    public Rectangulo(Punto2D centro, double base, double altura) {
-        super(centro);
+    public Rectangulo(Punto2D centro, double base, double altura, Color fondo, Color trazo) {
+        super(centro, fondo, trazo);
         this.base = base;
         this.altura = altura;
     }
 
+    @Override
+    public void dibujar(Graphics g) {
+        g.setColor(fondo);
+        g.fillRect(centro.getX(), centro.getY(), (int)base, (int)altura); // relleno
+        g.setColor(trazo);
+        g.drawRect(centro.getX(), centro.getY(), (int)base, (int)altura); // borde
+    }
+
+
     public Rectangulo() {
-        super(new Punto2D(0, 0));
+        super(new Punto2D(0, 0), Color.BLUE, Color.BLUE);
         this.base = 0;
         this.altura = 0;
     }

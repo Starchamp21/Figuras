@@ -1,15 +1,26 @@
 package dominio;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class Cuadrado extends Figura {
     protected double lado;
     
-    public Cuadrado(Punto2D centro, double lado) {
-        super(centro);
+    public Cuadrado(Punto2D centro, double lado, Color fondo, Color trazo) {
+        super(centro, fondo, trazo);
         this.lado = lado;
     }
 
+    @Override
+    public void dibujar(Graphics g) {
+        g.setColor(fondo);
+        g.fillRect(centro.getX(), centro.getY(), (int)lado, (int)lado); // relleno
+        g.setColor(trazo);
+        g.drawRect(centro.getX(), centro.getY(), (int)lado, (int)lado); // borde
+    }
+
+
     public Cuadrado() {
-        super(new Punto2D(0, 0));
+        super(new Punto2D(0, 0), Color.PINK, Color.PINK);
         this.lado = 0;
     }
 

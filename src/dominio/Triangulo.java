@@ -1,20 +1,32 @@
 package dominio;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class Triangulo extends Figura {
     protected Punto2D p1, p2, p3;
 
-    public Triangulo(Punto2D centro, Punto2D p1, Punto2D p2, Punto2D p3) {
-        super(centro);
+    public Triangulo(Punto2D centro, Punto2D p1, Punto2D p2, Punto2D p3, Color fondo, Color trazo) {
+        super(centro, fondo, trazo);
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;
     }
     
     public Triangulo() {
-        super(new Punto2D(0, 0));
+        super(new Punto2D(0, 0), Color.RED, Color.RED);
         p1 = new Punto2D();
         p2 = new Punto2D();
         p3 = new Punto2D();
+    }
+
+    @Override
+    public void dibujar(Graphics g) {
+        int [] lx = {p1.getX(), p2.getX(), p3.getX()};
+        int [] ly = {p1.getY(), p2.getY(), p3.getY()};
+        g.setColor(fondo);
+        g.fillPolygon(lx, ly, 4); // relleno
+        g.setColor(trazo);
+        g.drawPolygon(lx, ly, 4); // borde
     }
 
     public Punto2D getP1() {
