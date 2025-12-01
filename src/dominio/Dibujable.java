@@ -1,8 +1,8 @@
 package dominio;
-import javax.swing.*;
+// import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 
 // Interfaz para dibujar
 interface Dibujable {
